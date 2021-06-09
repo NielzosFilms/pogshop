@@ -11,10 +11,10 @@ export function App() {
             createMuiTheme({
                 palette: {
                     primary: {
-                        main: "#A1469E",
+                        main: "#390099",
                     },
                     secondary: {
-                        main: "#02A699",
+                        main: "#9E0059",
                     },
                     type: prefersDarkMode ? "dark" : "light",
                 },
