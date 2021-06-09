@@ -2,7 +2,7 @@ import React from "react";
 import { useMediaQuery, Typography } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Appbar } from "./../components/Layout";
+import { Appbar } from "./../components/layout/";
 
 export function App() {
     const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -11,10 +11,10 @@ export function App() {
             createMuiTheme({
                 palette: {
                     primary: {
-                        main: "#390099",
+                        main: "#F7B2B7",
                     },
                     secondary: {
-                        main: "#9E0059",
+                        main: "#F7717D",
                     },
                     type: prefersDarkMode ? "dark" : "light",
                 },
