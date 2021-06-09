@@ -1,8 +1,10 @@
 import React from "react";
-import { useMediaQuery, Typography } from "@material-ui/core";
+import { useMediaQuery, Typography, Button } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Appbar } from "./../components/layout/";
+
+import { AuthenticationProvider } from "../services/AuthenticationProvider";
 
 export function App() {
     const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -24,7 +26,7 @@ export function App() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Appbar/>
+            <Appbar />
 
             <div className="App">
                 <Typography variant="h1">APP</Typography>

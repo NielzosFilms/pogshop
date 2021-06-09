@@ -15,7 +15,7 @@ const port =
 console.log(process.env.NODE_ENV);
 
 const httpLink = createHttpLink({
-    uri: `https://${host || "localhost"}:${port || "8080"}/graphql`,
+    uri: `http://${host || "localhost"}:${port || "8080"}/graphql`,
     ...(process.env.NODE_ENV === "production" && { credentials: "include" }),
 });
 
@@ -31,11 +31,7 @@ const authLink = setContext((_, { headers }) => {
 
 const client = new ApolloClient({
     link: authLink.concat(httpLink),
-    cache: new InMemoryCache({
-        Note: {
-            merge: false,
-        },
-    }),
+    cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
