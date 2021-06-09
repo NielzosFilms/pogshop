@@ -31,6 +31,7 @@ export function LoginDialog(props) {
 
     const handleSubmit = () => {
         props.login(username, password);
+        setOpen(false);
     };
     return (
         <>

@@ -8,6 +8,13 @@ const typedefs = gql`
         admin: Boolean!
     }
 
+    type Product {
+        name: String!
+        description: String!
+        price: Float!
+        inStock: Boolean!
+    }
+
     type LoginPayload {
         success: Boolean!
         token: String
@@ -16,6 +23,8 @@ const typedefs = gql`
     type Query {
         isAuthenticated: Boolean
         getAuthenticatedUser: User
+
+        products: [Product]
     }
 
     type Mutation {
