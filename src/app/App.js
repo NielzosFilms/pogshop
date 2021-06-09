@@ -3,7 +3,7 @@ import { useMediaQuery, Typography } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-function App() {
+export function App() {
     const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
     const theme = React.useMemo(
         () =>
@@ -29,5 +29,3 @@ function App() {
         </ThemeProvider>
     );
 }
-
-export default App;
