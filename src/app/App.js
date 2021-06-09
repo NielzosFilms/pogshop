@@ -2,6 +2,7 @@ import React from "react";
 import { useMediaQuery, Typography } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+// import { Test } from "./../components/layout/Test";
 import { Appbar } from "./../components/layout/";
 
 export function App() {
@@ -24,7 +25,7 @@ export function App() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Appbar/>
+            <Appbar />
 
             <div className="App">
                 <Typography variant="h1">APP</Typography>
