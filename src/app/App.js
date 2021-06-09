@@ -2,6 +2,7 @@ import React from "react";
 import { useMediaQuery, Typography, Button } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+// import { Test } from "./../components/layout/Test";
 import { Appbar } from "./../components/layout/";
 
 import { AuthenticationProvider } from "../services/AuthenticationProvider";
