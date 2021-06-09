@@ -33,28 +33,28 @@ const server = new ApolloServer({
                 token: null,
             };
         }
-        const token = req.headers.authorization || "";
-        const session = await sequelize.Session.findOne({
-            where: {
-                token: token,
-            },
-        });
+        // const token = req.headers.authorization || "";
+        // const session = await sequelize.Session.findOne({
+        //     where: {
+        //         token: token,
+        //     },
+        // });
 
-        if (session) {
-            const user = await sequelize.User.findOne({
-                where: {
-                    id: session.user_id,
-                },
-            });
-            if (user) {
-                return {
-                    models: sequelize,
-                    loggedIn: true,
-                    user,
-                    token,
-                };
-            }
-        }
+        // if (session) {
+        //     const user = await sequelize.User.findOne({
+        //         where: {
+        //             id: session.user_id,
+        //         },
+        //     });
+        //     if (user) {
+        //         return {
+        //             models: sequelize,
+        //             loggedIn: true,
+        //             user,
+        //             token,
+        //         };
+        //     }
+        // }
         return {
             models: sequelize,
             loggedIn: false,
