@@ -28,6 +28,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import PolymerRoundedIcon from "@material-ui/icons/PolymerRounded";
+import { AuthenticationProvider } from "./../../services/AuthenticationProvider";
 
 const drawerWidth = 240;
 
@@ -138,7 +139,9 @@ export function Appbar() {
                         <Typography variant="h6" className={classes.title}>
                             Pogshop
                         </Typography>
-                        <LoginDialog />
+                        <AuthenticationProvider>
+                            <LoginDialog />
+                        </AuthenticationProvider>
                     </Toolbar>
                 </AppBar>
                 <Drawer

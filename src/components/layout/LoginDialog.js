@@ -15,7 +15,8 @@ import {
 import { Menu } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 
-export function LoginDialog() {
+export function LoginDialog(props) {
+    console.log(props);
     const [open, setOpen] = React.useState(false);
     const [username, setUsername] = React.useState("");
     const [password, setPassword] = React.useState("");
@@ -29,14 +30,19 @@ export function LoginDialog() {
     };
 
     const handleSubmit = () => {
-        console.log(username);
-        console.log(password);
+        props.login(username, password);
     };
     return (
         <>
-            <Button color="inherit" onClick={handleClickOpen}>
-                Login
-            </Button>
+            {props.loggedIn ? (
+                <Button color="inherit" onClick={props.logout}>
+                    Logout
+                </Button>
+            ) : (
+                <Button color="inherit" onClick={handleClickOpen}>
+                    Login
+                </Button>
+            )}
             <Dialog
                 open={open}
                 onClose={handleClose}
